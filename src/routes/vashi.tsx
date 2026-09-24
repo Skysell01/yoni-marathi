@@ -26,7 +26,7 @@ export const Route = createFileRoute("/vashi")({
   component: LandingPage,
 });
 
-const CHECKOUT_URL = "#checkout";
+const CHECKOUT_URL = "https://superprofile.bio/vp/योनी-वश्यकला---एक-संपूर्ण-मार्गदर्शक?checkout=true";
 
 function LandingPage() {
   return (
@@ -262,6 +262,17 @@ function LearnSection() {
               "फोटोवरून वशीकरण करण्याची गुप्त तांत्रिक प्रक्रिया",
             ]}
           />
+          <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <a
+              href={CHECKOUT_URL}
+              className="group inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-bold text-white btn-glow cta-shine hover:btn-glow-hover w-full sm:w-auto"
+            >
+              <Download className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+              <span>संपूर्ण विद्या शिका — फक्त ₹249</span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+            <span className="text-xs text-white/60 font-medium">⚡ इन्स्टंट PDF ॲक्सेस</span>
+          </div>
         </div>
         <Reveal className="group relative overflow-hidden rounded-2xl border border-white/10 shadow-[var(--shadow-card)]">
           <img src={mantraImg} alt="Mantra" className="h-full w-full object-cover transition-transform duration-[1400ms] group-hover:scale-110" />
@@ -301,6 +312,22 @@ function IncludedSection() {
           </Reveal>
         ))}
       </div>
+      <Reveal className="mt-10 text-center">
+        <div className="inline-flex flex-col items-center gap-3">
+          <a
+            href={CHECKOUT_URL}
+            className="group inline-flex items-center justify-center gap-2.5 rounded-xl px-8 py-3.5 text-sm sm:text-base font-bold text-white btn-glow cta-shine pulse-glow hover:btn-glow-hover"
+          >
+            <Download className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
+            <span>हे सर्व मिळवा फक्त ₹249 मध्ये — आत्ताच खरेदी करा</span>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </a>
+          <p className="flex items-center gap-2 text-xs text-white/60 font-medium">
+            <ShieldCheck className="h-3.5 w-3.5 text-[color:var(--accent)]" />
+            सुरक्षित पेमेंट · इन्स्टंट ईमेल डिलिव्हरी
+          </p>
+        </div>
+      </Reveal>
     </SectionShell>
   );
 }
@@ -379,6 +406,21 @@ function TestimonialsSection() {
           <Testimonial key={t.name} {...t} />
         ))}
       </div>
+      <Reveal className="mt-10 text-center">
+        <div className="inline-flex flex-col items-center gap-3">
+          <a
+            href={CHECKOUT_URL}
+            className="group inline-flex items-center justify-center gap-2.5 rounded-xl px-8 py-3.5 text-sm sm:text-base font-bold text-white btn-glow cta-shine pulse-glow hover:btn-glow-hover"
+          >
+            <Sparkles className="h-4 w-4 text-[color:var(--gold)]" />
+            <span>२०००+ साधकांप्रमाणे तुम्हीही अनुभव घ्या — ₹249 मध्ये मिळवा</span>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </a>
+          <p className="text-xs text-white/60 font-medium">
+            ⭐ 4.9/5 रेटिंग · मर्यादित काळासाठी विशेष ऑफर
+          </p>
+        </div>
+      </Reveal>
     </SectionShell>
   );
 }
